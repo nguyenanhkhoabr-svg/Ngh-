@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Món quà dành cho Nghé ❤️</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+
+            min-height: 100vh;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #260914 0%,
+                    #0d0307 45%,
+                    #000000 100%
+                );
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            color: white;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            overflow-x: hidden;
+
+            padding: 25px;
+        }
+
+
+        /* =========================
+           ÁNH SÁNG NỀN
+        ========================= */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255,105,160,0.12),
+                    transparent 55%
+                );
+
+            animation: glow 4s ease-in-out infinite alternate;
+        }
+
+
+        @keyframes glow {
+
+            from {
+                opacity: 0.5;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        /* =========================
+           KHUNG QUÀ
+        ========================= */
+
+        .gift-box {
+
+            width: 100%;
+
+            max-width: 900px;
+
+            padding: 35px 25px 40px;
+
+            text-align: center;
+
+            border:
+
+                1px solid
+                rgba(255,105,160,0.55);
+
+            border-radius: 25px;
+
+            background:
+                rgba(20,5,12,0.72);
+
+            box-shadow:
+
+                0 0 25px
+                rgba(255,105,160,0.18),
+
+                inset 0 0 30px
+                rgba(255,105,160,0.05);
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* =========================
+           TIÊU ĐỀ
+        ========================= */
+
+        h1 {
+
+            font-size:
+                clamp(28px, 7vw, 55px);
+
+            margin-bottom: 12px;
+
+            color: #ff9fc3;
+
+            text-shadow:
+
+                0 0 8px #ff6fa3,
+
+                0 0 20px #ff6fa3,
+
+                0 0 40px
+                rgba(255,105,160,0.7);
+        }
+
+
+        .subtitle {
+
+            font-size:
+                clamp(16px, 4vw, 22px);
+
+            line-height: 1.6;
+
+            color: #ffffff;
+
+            margin-bottom: 30px;
+
+            opacity: 0.9;
+        }
+
+
+        /* =========================
+           HÌNH BÓ HOA
+        ========================= */
+
+        .bouquet {
+
+            width: 100%;
+
+            max-width: 720px;
+
+            margin: auto;
+
+            display: block;
+
+            border-radius: 20px;
+
+            border:
+                2px solid
+                rgba(255,105,160,0.45);
+
+            box-shadow:
+
+                0 0 20px
+                rgba(255,105,160,0.25),
+
+                0 0 60px
+                rgba(255,105,160,0.12);
+
+            animation:
+                bouquetAppear 1.5s ease,
+                bouquetFloat 4s ease-in-out
+                1.5s infinite;
+        }
+
+
+        @keyframes bouquetAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    scale(0.8)
+                    translateY(30px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    scale(1)
+                    translateY(0);
+            }
+        }
+
+
+        @keyframes bouquetFloat {
+
+            0%,
+            100% {
+
+                transform:
+                    translateY(0);
+            }
+
+            50% {
+
+                transform:
+                    translateY(-8px);
+            }
+        }
+
+
+        /* =========================
+           LỜI NHẮN
+        ========================= */
+
+        .message {
+
+            margin-top: 30px;
+
+            font-size:
+                clamp(17px, 4vw, 23px);
+
+            line-height: 1.7;
+
+            color: #ffdce9;
+
+            text-shadow:
+                0 0 10px
+                rgba(255,105,160,0.5);
+        }
+
+
+        .love {
+
+            margin-top: 15px;
+
+            font-size:
+                clamp(20px, 5vw, 30px);
+
+            color: #ff6fa3;
+
+            font-weight: bold;
+
+            text-shadow:
+
+                0 0 10px #ff6fa3,
+
+                0 0 25px #ff6fa3;
+        }
+
+
+        /* =========================
+           NÚT
+        ========================= */
+
+        .buttons {
+
+            margin-top: 30px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+
+        button {
+
+            border: 1px solid
+                rgba(255,255,255,0.45);
+
+            background:
+                rgba(255,105,160,0.16);
+
+            color: white;
+
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 0 15px
+                rgba(255,105,160,0.2);
+
+            transition: 0.3s;
+        }
+
+
+        button:hover {
+
+            background:
+                rgba(255,105,160,0.35);
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 0 25px
+                rgba(255,105,160,0.45);
+        }
+
+
+        /* =========================
+           TIM BAY
+        ========================= */
+
+        .heart {
+
+            position: fixed;
+
+            bottom: -30px;
+
+            color: #ff6fa3;
+
+            font-size: 18px;
+
+            pointer-events: none;
+
+            animation: fly 6s linear forwards;
+
+            z-index: 1;
+        }
+
+
+        @keyframes fly {
+
+            from {
+
+                transform:
+                    translateY(0)
+                    scale(0.7);
+
+                opacity: 0;
+            }
+
+            15% {
+
+                opacity: 1;
+            }
+
+            to {
+
+                transform:
+                    translateY(-110vh)
+                    scale(1.3);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================
+           ĐIỆN THOẠI
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                padding: 15px;
+            }
+
+            .gift-box {
+
+                padding:
+                    28px 15px 30px;
+
+                border-radius: 20px;
+            }
+
+            .bouquet {
+
+                border-radius: 15px;
+            }
+
+            .message {
+
+                margin-top: 22px;
+            }
+
+            .buttons {
+
+                flex-direction: column;
+            }
+
+            button {
+
+                width: 100%;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="gift-box">
+
+        <h1>
+            🎁 Món quà dành cho Nghé
+        </h1>
+
+
+        <div class="subtitle">
+
+            Cuối cùng cũng đến món quà của vợ rùi... ❤️
+
+        </div>
+
+
+        <!-- HÌNH BÓ HOA -->
+
+        <img
+            src="images/bouquet.jpg"
+            alt="Bó hoa dành tặng Nghé"
+            class="bouquet"
+        >
+
+
+        <div class="message">
+
+            Tui không biết món quà này có đủ đặc biệt
+            hay không...
+
+            <br>
+
+            Nhưng tui đã dành nó cho người đặc biệt nhất
+            của tui. ❤️
+
+        </div>
+
+
+        <div class="love">
+
+            Khoa thương Nghé nhứt trên đời ❤️
+
+        </div>
+
+
+        <div class="buttons">
+
+            <button onclick="location.href='index.html'">
+
+                💌 Xem lại lá thư
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function createHeart() {
+
+            const heart =
+                document.createElement("div");
+
+            heart.className = "heart";
+
+            heart.textContent =
+                Math.random() > 0.5
+                ? "♥"
+                : "♡";
+
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+            heart.style.fontSize =
+                (12 + Math.random() * 18) + "px";
+
+            heart.style.animationDuration =
+                (4 + Math.random() * 4) + "s";
+
+            document.body.appendChild(heart);
+
+
+            setTimeout(() => {
+
+                heart.remove();
+
+            }, 8000);
+        }
+
+
+        setInterval(
+            createHeart,
+            700
+        );
+
+    </script>
+
+
+</body>
+
+</html>
